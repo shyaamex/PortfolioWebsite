@@ -1,16 +1,25 @@
+// import LocomotiveScroll from 'locomotive-scroll';
+
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
+
+
 // Mouse trail
 
-var body = document.body;
-document.addEventListener('mousemove',(e)=>{
-    var el=document.createElement('div');
-    el.setAttribute('class','trail'),
-    el.setAttribute('style',`left: ${e.clientX-10}px; top: ${e.clientY-10}px;`);
-    el.onanimationend=()=>{
-        el.remove();
-    }
-    body.insertAdjacentElement('beforeend',el);
-    
-})
+// var body = document.body;
+// document.addEventListener('mousemove',(e)=>{
+//     var el=document.createElement('div');
+//     el.setAttribute('class','trail'),
+//     el.setAttribute('style',`left: ${e.clientX-10}px; top: ${e.clientY-10}px;`);
+//     el.onanimationend=()=>{
+//         el.remove();
+//     }
+//     body.insertAdjacentElement('beforeend',el);
+
+// })
 
 
 
@@ -36,12 +45,7 @@ $(document).ready(function (){
     }
 })
 
-// import LocomotiveScroll from 'locomotive-scroll';
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
-});
 
 // Animating the first page of our website
 
