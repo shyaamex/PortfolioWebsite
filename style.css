@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Akaya Kanadaka';
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+
+
+
+
+
+.trail{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgb(61, 159, 219);
+    background: rgb(61, 159, 219);
+    position: fixed;
+    animation: come 1s linear forwards;
+
+}
+@keyframes come {
+    0%{
+        transform: scale(0);
+    }
+    10%{
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0) translateY(50px);
+        opacity: 0;
+    }
+}
+
+
+
+
+.bounding {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding .boundingelem {
+    transform: translateY(100%);
+}
+
+
+#main{
+    width: 100%;
+    background-color: black;
+    color:#fff;
+}
+#navbar{
+    background-color: black;
+    opacity: 0.9;
+    width: 100%;
+    padding: 20px 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar a{
+    font-size: 22px;
+    text-decoration: none;
+    color: #fff;
+}
+
+#home{
+    background-image: url(images/image92.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+
+#heading{
+    margin-top: 30px;
+}
+
+#heading h1{
+    
+    margin-left: 40px;
+    width: fit-content;
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    /* opacity: 0.75; */
+}
+
+#heading h1:hover{
+    /* background-color: #888; */
+    color: rgb(61, 159, 219);
+    font-size: 9vw;
+    text-shadow: 2px 2px red;
+
+}
+
+#heading #second{
+    margin-left: 200px;
+}
+
+.blocktext{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: fit-content;
+}
+
+.blocktext h5{
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 1.25vw;
+    margin-top: .5vw;
+}
+
+#footer{
+    width: 100%;
+    position: absolute;
+    padding: 0 2vw;
+    bottom: 2%;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 1px;
+}
+
+#footer a{
+    
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#footer a:hover{
+    /* background-color: #888; */
+    color: rgb(61, 159, 219);
+    text-shadow: 2px 2px red;
+    font-size: 1.2vw;
+    
+}
+
+#footer .iconset{
+    display: flex;
+    gap: 5px;
+}
+
+#footer .circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #888;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Second Page layout starts from here */
+
+#menue{
+    padding-right: 10vw;
+    padding-top: 200px;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+
+.elem{
+    width: 95%;
+    border-top: 1px solid #fff;
+    padding: 3.5vw 3vw;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.elem h1{
+    text-transform: uppercase;
+    font-size: 6vw;
+}
+
+.third{
+    border-bottom: 1px solid #fff;
+}
+.elem img{
+    position: absolute;
+    width: 300px;
+    z-index: 999;
+    opacity: 0;
+
+}
+
+#section-about{
+    /* padding-left: 1.5rem; */
+    margin-top: 20vw;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.skillset{
+    opacity: 0.2;
+    text-transform: capitalize;
+    font-size: 8vw;
+    padding: 3.5vw 3vw;
+    padding-left: 10px;
+}
+
+
+#section-about{
+    flex-direction: row;
+    /* padding-left: 13rem; */
+}
+
+
+.skills-charts{
+    margin-right: 20%;
+}
+
+#aboutme{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+    padding: 10vw 5vw;
+    background-color: black;
+    color: #fff;
+    padding-left: 30vw;
+
+}
+
+#image-about img{
+    width: 20vw;
+    border-radius: 50%;
+    
+}
+
+#text-about a{
+    text-decoration: none;
+    color: rgb(61, 159, 219);
+    font-size: 2vw;
+}
+#text-about p{
+    font-size: 2vw;
+}
+
+#text-about #tech{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    padding: 12px 22px;
+    font-size: 1.5vw;
+}
+
+#subscribe{
+    color: #fff;
+    background-color: black;
+    padding: 20px 30px;
+    padding-bottom: 10vw;
+}
+
+#subscribe h5{
+    opacity: 0.4;
+    text-transform: uppercase;
+}
+
+#subscribe h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+    
+}
+
+#subscribe a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+#Bottomfooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 40px 30px;
+    background-color: black;
+    color: #fff;
+}
+
+
+#Bottomfooter a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+}
+#Bottomfooterright{
+    display: flex;
+    gap: 50px;
+}
+
+#Bottomfooterleft{
+    display: flex;
+    gap: 50px;
+}
+
+
