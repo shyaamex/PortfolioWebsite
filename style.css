@@ -18,7 +18,7 @@ html,body{
     width: 10px;
     height: 10px;
     position: absolute;
-    z-index: 9999;
+    z-index: 99999;
     border-radius: 50%;
     background-color: #fff;
 }
@@ -264,13 +264,24 @@ html,body{
     
 }
 
+#header h2{
+    font-size: 3vw;
+}
+
+#header h2:hover{
+    font-size: 3vw;
+    color: rgb(61, 159, 219);
+    text-shadow: 2px 2px red;
+
+}
+
 #text-about a{
     text-decoration: none;
     color: rgb(61, 159, 219);
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 #text-about p{
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 #text-about #tech{
