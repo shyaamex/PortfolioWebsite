@@ -100,7 +100,7 @@ html,body{
     
     margin-left: 40px;
     width: fit-content;
-    font-size: 8vw;
+    font-size: 10vw;
     text-transform: uppercase;
     font-weight: 800;
     /* opacity: 0.75; */
@@ -109,8 +109,8 @@ html,body{
 #heading h1:hover{
     /* background-color: #888; */
     color: rgb(61, 159, 219);
-    font-size: 9vw;
-    text-shadow: 2px 2px red;
+    font-size: 10vw;
+    text-shadow: 5px 5px #fff;
 
 }
 
@@ -150,12 +150,13 @@ html,body{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 1.2vw;
 }
 
 #footer a:hover{
     /* background-color: #888; */
     color: rgb(61, 159, 219);
-    text-shadow: 2px 2px red;
+    /* text-shadow: 2px 2px #fff; */
     font-size: 1.2vw;
     
 }
@@ -271,7 +272,7 @@ html,body{
 #header h2:hover{
     font-size: 3vw;
     color: rgb(61, 159, 219);
-    text-shadow: 2px 2px red;
+    text-shadow: 2px 2px #fff;
 
 }
 
