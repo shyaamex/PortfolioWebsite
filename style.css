@@ -11,6 +11,9 @@ html,body{
     
 
 }
+head img{
+    border-radius: 50%;
+}
 
 
 
@@ -18,28 +21,13 @@ html,body{
 
 
 .trail{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid rgb(61, 159, 219);
-    background: rgb(61, 159, 219);
-    position: fixed;
-    animation: come 1s linear forwards;
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: teal;
 
 }
-@keyframes come {
-    0%{
-        transform: scale(0);
-    }
-    10%{
-        transform: scale(1) translateY(0px);
-        opacity: 1;
-    }
-    100%{
-        transform: scale(0) translateY(50px);
-        opacity: 0;
-    }
-}
+
 
 
 
