@@ -12,8 +12,15 @@ html,body{
     
 
 }
-head img{
+
+#minicircle {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 9999;
     border-radius: 50%;
+    background-color: #fff;
 }
 
 
@@ -198,7 +205,7 @@ head img{
     font-size: 6vw;
 }
 
-.third{
+#elem2{
     border-bottom: 1px solid #fff;
 }
 .elem img{
