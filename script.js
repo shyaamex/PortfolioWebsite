@@ -141,23 +141,23 @@ firstPageAnim();
 
 // The second page hover image animations
 
-document.querySelectorAll("#elem").forEach(function (elem) {
+document.querySelectorAll("#elem").forEach(function (elm) {
     var rotate = 0;
     var diffrot = 0;
   
-    elem.addEventListener("mouseleave", function (dets) {
-      gsap.to(elem.querySelector("img"), {
+    elm.addEventListener("mouseleave", function (dets) {
+      gsap.to(elm.querySelector("img"), {
         opacity: 0,
         ease: Power3,
         duration: 0.5,
       });
     });
   
-    elem.addEventListener("mousemove", function (dets) {
-      var diff = dets.clientY - elem.getBoundingClientRect().top;
+    elm.addEventListener("mousemove", function (dets) {
+      var diff = dets.clientY - elm.getBoundingClientRect().top;
       diffrot = dets.clientX - rotate;
       rotate = dets.clientX;
-      gsap.to(elem.querySelector("img"), {
+      gsap.to(elm.querySelector("img"), {
         opacity: 1,
         ease: Power3,
         top: diff,
@@ -170,23 +170,23 @@ document.querySelectorAll("#elem").forEach(function (elem) {
 
 
 
-  document.querySelectorAll("#elem1").forEach(function (elem) {
+  document.querySelectorAll("#elem1").forEach(function (el) {
     var rotate = 0;
     var diffrot = 0;
   
-    elem.addEventListener("mouseleave", function (dets) {
-      gsap.to(elem.querySelector("img"), {
+    el.addEventListener("mouseleave", function (dets) {
+      gsap.to(el.querySelector("img"), {
         opacity: 0,
         ease: Power3,
         duration: 0.5,
       });
     });
   
-    elem.addEventListener("mousemove", function (dets) {
-      var diff = dets.clientY - elem.getBoundingClientRect().top;
+    el.addEventListener("mousemove", function (dets) {
+      var diff = dets.clientY - el.getBoundingClientRect().top;
       diffrot = dets.clientX - rotate;
       rotate = dets.clientX;
-      gsap.to(elem.querySelector("img"), {
+      gsap.to(el.querySelector("img"), {
         opacity: 1,
         ease: Power3,
         top: diff,
