@@ -9,32 +9,23 @@
 html,body{
     width: 100%;
     height: 100%;
-    
+    margin: 0;
+    overflow: hidden;
 
 }
 
-#minicircle {
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
-    width: 10px;
-    height: 10px;
-    position: absolute;
+
+
+.hide{ 
+    display:none;
+
+}
+
+
+.c{
     z-index: 99999;
-    border-radius: 50%;
-    background-color: #fff;
 }
 
-
-
-
-
-
-/* .trail{
-    position: absolute;
-    height: 6px; width: 6px;
-    border-radius: 3px;
-    background: teal;
-
-} */
 
 
 

@@ -17,18 +17,14 @@
 <body >
     
     
-    <div id="minicircle"></div>
-
-
-
+    <!-- <canvas  id="c"></canvas> -->
+    <div class="cursor"></div>
+    <div class="cursor_point"></div>
     
-
-
-
-
-    
-    <div id="main">
+    <div class="message" id="main">
+        
         <div id="home">
+            
             <div id="navbar">
                 <a href="#">Shyam Pratap</a>
                 <h3>Menu+</h3>
@@ -56,7 +52,9 @@
                     </div>
             </div>
         </div>
-        <div  id="menue">
+        
+        
+        <div  id="menue" href="menue/projects.html">
             <div class="elem" id="elem">
                 <img src="images/image911.jfif" alt="">
                 <h1>The Projects</h1>
@@ -111,6 +109,7 @@
                 </div>
         
         </div>
+        
         <div id="aboutme">
             <div id="image-about">
                 <img src="images/image102.jpeg" alt="Profile Image">
@@ -140,7 +139,7 @@
         </div>
         <div id="Bottomfooter">
             <div id="Bottomfooterleft">
-                <h5>2023 &copy</h5><h5>11:31 am ist</h5>
+                <h5>2023 &copy</h5><h5 id="currtime"></h5><h5>IST</h5>
                 
             </div>
             <div id="Bottomfooterright">
@@ -151,7 +150,7 @@
             </div>
         </div>
     </div>
-
+    
     
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="./jquery.tagcanvas.js"></script>
@@ -160,9 +159,10 @@
     <!-- Adding GSAP to file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
     
     <script src="script.js"></script>
+    
     
 </body>
 </html>
