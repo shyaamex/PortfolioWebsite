@@ -16,24 +16,18 @@ html,body{
 
 
 #cursor {
+    opacity: 1;
     height: 20px;
     width: 20px;
     background-color: #fff;
     border-radius: 50%;
     position: fixed;
     z-index: 99;
-    transition: all linear 0.1s;
-  }
-#cursor-blur {
-    height: 500px;
-    width: 500px;
-    background-color: grey;
-    border-radius: 50%;
-    position: fixed;
-    filter: blur(80px);
-    z-index: -0.25;
-    transition: all linear 0.4s;
+    transition: all cubic-bezier(0.19, 1, 0, 0) 1s;
 }
+
+
+
 
 
 
@@ -182,56 +176,6 @@ html,body{
 
 /* Second Page layout starts from here */
 
-
-#scroller {
-    /* background-color: red; */
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    position: relative;
-    padding-top: 100px;
-  }
-  #scroller::-webkit-scrollbar {
-    display: none;
-  }
-  #scroller-in {
-    display: inline-block;
-    white-space: nowrap;
-    animation-name: scroll;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-  
-  #scroller h4 {
-    display: inline-block;
-    font-size: 60px;
-    font-weight: 900;
-    font-family: gilroy;
-    margin-right: 20px;
-    transition: all linear 0.3s;
-    color: #000;
-    -webkit-text-stroke: 2px #ffffff;
-  }
-  #scroller h4:hover {
-    color: rgb(61, 159, 219);
-    -webkit-text-stroke: 2px rgb(61, 159, 219);
-  }
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-
-
-
-
-
-
-
 #menue{
     padding-right: 10vw;
     padding-top: 200px;
@@ -244,18 +188,24 @@ html,body{
 .elem{
     width: 95%;
     border-top: 1px solid #fff;
-    padding: 3.5vw 3vw;
+    padding: 3.5vw 3vw 3.5vw 0;
     padding-right: 0;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     position: relative;
 
 }
-
+.elem a{
+    color: #fff;
+    text-decoration: none;
+    padding-left: 10px;
+}
 .elem h1{
     text-transform: uppercase;
     font-size: 8vw;
+    padding-left: 10px;
 }
 
 #elem2{

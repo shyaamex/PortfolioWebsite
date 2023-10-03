@@ -23,17 +23,50 @@ document.addEventListener("mousemove", function (dets) {
 
 // Cursor animations ( we haven't used mouse trail)
 
-gsap.to("#main", {
-  backgroundColor: "black",
-  scrollTrigger: {
-    trigger: "#main",
-    scroller: "body",
-    start: "top -30%",
-    end: "top -50%",
-    // scrub: 1,
-    // markers:true,
-  },
-});
+// var crsr = document.querySelector("#cursor");
+
+// document.addEventListener("mousemove", function (dets) {
+//   crsr.style.left = dets.x + "px";
+//   crsr.style.top = dets.y + "px";
+// });
+
+function circleChaptaKaro() {
+  // define default scale value
+  var xscale = 1;
+  var yscale = 1;
+
+  var xprev = 0;
+  var yprev = 0;
+
+  window.addEventListener("mousemove", function (dets) {
+    clearTimeout(timeout);
+
+    xscale = gsap.utils.clamp(0.8, 1.2, dets.clientX - xprev);
+    yscale = gsap.utils.clamp(0.8, 1.2, dets.clientY - yprev);
+
+    xprev = dets.clientX;
+    yprev = dets.clientY;
+
+    circleMouseFollower(xscale, yscale);
+
+    timeout = setTimeout(function () {
+      document.querySelector(
+        "#cursor"
+      ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(1, 1)`;
+    }, 100);
+  });
+}
+
+function circleMouseFollower(xscale, yscale) {
+  window.addEventListener("mousemove", function (dets) {
+    document.querySelector(
+      "#cursor"
+    ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
+  });
+}
+circleChaptaKaro();
+circleMouseFollower();
+
 
 
 
@@ -109,14 +142,24 @@ document.querySelectorAll(".elem").forEach(function (elem) {
     var rotate = 0;
     var diffrot = 0;
   
-    elem.addEventListener("mouseleave", function (dets) {
+    elem.addEventListener("mouseleave", function(dets) {
       gsap.to(elem.querySelector("img"), {
         opacity: 0,
         ease: Power3,
         duration: 0.5,
       });
+      gsap.to(elem.querySelector("h1"), {
+        opacity: 1,        
+      });
+      gsap.to(document.querySelector("#cursor"),{
+        width:20,
+        height:20,
+        opacity:1,
+        
+      })
     });
   
+
     elem.addEventListener("mousemove", function (dets) {
       var diff = dets.clientY - elem.getBoundingClientRect().top;
       diffrot = dets.clientX - rotate;
@@ -126,37 +169,28 @@ document.querySelectorAll(".elem").forEach(function (elem) {
         ease: Power3,
         top: diff,
         left: dets.clientX,
-        rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
+        rotate: gsap.utils.clamp(-20, 20, diffrot * 0.8),
       });
+      gsap.to(elem.querySelector("h1"), {
+        opacity: 0.1,        
+      });
+      gsap.to(document.querySelector("#cursor"),{
+        width:80,
+        height:80,
+        opacity:0.3
+        
+      })
     });
 });
 
 
 
 
+var cursor = document.querySelector("#cursor");
 
+elem.addEventListener("mousemove",function(det){
 
-document.querySelectorAll("#cursor").forEach(function (el) {
-  var rotate = 0;
-  var diffrot = 0;
-
-  el.addEventListener("mouseleave", function (dets) {
-    gsap.to(el.querySelector("#cursor"), {
-      height:20,
-      width:20,
-    });
-  });
-
-  el.addEventListener("mousemove", function (dets) {
-    var diff = dets.clientY - el.getBoundingClientRect().top;
-    diffrot = dets.clientX - rotate;
-    rotate = dets.clientX;
-    gsap.to(el.querySelector("#cursor"), {
-      height:100,
-      width:100,
-    });
-  });
-});
+})
 
 
 
