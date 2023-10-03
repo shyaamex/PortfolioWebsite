@@ -38,13 +38,6 @@ html,body{
 
 
 
-
-
-
-
-
-
-
 .bounding {
     width: fit-content;
     overflow: hidden;
@@ -156,19 +149,28 @@ html,body{
     
 }
 
-#footer .iconset{
+/* #down .iconset{
     display: flex;
     gap: 5px;
-}
+} */
 
-#footer .circle{
-    width: 25px;
-    height: 25px;
+#down{
+    align-items: end;
+    position: absolute;
+    padding-right: 50px;
+    right: 0;
+    bottom: 20%;
+}
+#down .circle{
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: #888;
+    border: 1.5px solid #fff;
     align-items: center;
     display: flex;
     justify-content: center;
+
+
 }
 
 
