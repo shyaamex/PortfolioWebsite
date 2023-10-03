@@ -6,6 +6,33 @@ gsap.to("#circle",{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var active =3;
 var minicircles = document.querySelectorAll(".minicircle");
 var second = document.querySelectorAll(".second");
