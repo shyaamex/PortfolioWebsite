@@ -6,6 +6,17 @@ const scroll = new LocomotiveScroll({
 });
 
 
+var crsr = document.querySelector("#cursor");
+var blur = document.querySelector("#cursor-blur");
+
+document.addEventListener("mousemove", function (dets) {
+  crsr.style.left = dets.x + "px";
+  crsr.style.top = dets.y + "px";
+  blur.style.left = dets.x - 250 + "px";
+  blur.style.top = dets.y - 250 + "px";
+});
+
+
 
 
 
@@ -119,6 +130,56 @@ document.querySelectorAll(".elem").forEach(function (elem) {
       });
     });
 });
+
+
+
+
+
+
+document.querySelectorAll("#cursor").forEach(function (el) {
+  var rotate = 0;
+  var diffrot = 0;
+
+  el.addEventListener("mouseleave", function (dets) {
+    gsap.to(el.querySelector("#cursor"), {
+      height:20,
+      width:20,
+    });
+  });
+
+  el.addEventListener("mousemove", function (dets) {
+    var diff = dets.clientY - el.getBoundingClientRect().top;
+    diffrot = dets.clientX - rotate;
+    rotate = dets.clientX;
+    gsap.to(el.querySelector("#cursor"), {
+      height:100,
+      width:100,
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
