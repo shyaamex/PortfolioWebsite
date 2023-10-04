@@ -37,6 +37,8 @@ var active =3;
 var minicircles = document.querySelectorAll(".minicircle");
 var second = document.querySelectorAll(".second");
 
+
+
 gsap.to(minicircles[active-1],{
     opacity: 1,
 })
@@ -44,6 +46,7 @@ gsap.to(minicircles[active-1],{
 gsap.to(second[active-1],{
     opacity: 1,
 })
+
 
 minicircles.forEach(function(val, index){ 
     val.addEventListener("click", function(){ 
@@ -71,6 +74,8 @@ function geryout(){
     gsap.to(second,{
         opacity:0.2
     })
+    
+
 }
 
 second.forEach(function(val, index){ 

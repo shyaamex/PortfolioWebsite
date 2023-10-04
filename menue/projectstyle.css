@@ -8,6 +8,7 @@
 body,html{
     width: 100%;
     height: 100%;
+    overflow: hidden;
 
 }
 
@@ -87,6 +88,14 @@ body,html{
     position: relative;
 
 }
+.second img{
+    width:50px;
+    top: 50%;
+    border-radius: 50%;
+    position: absolute;
+    left: 45vw; 
+    transform: translate(0, -50%);
+}
 
 .second{
     padding-left: 20px;
@@ -105,6 +114,10 @@ body,html{
 
 .second p{
     font-size: 1vw;
+}
+
+.second p:hover{
+    cursor: default;
 }
 
 

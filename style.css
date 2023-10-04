@@ -188,8 +188,9 @@ html,body{
 .elem{
     width: 95%;
     border-top: 1px solid #fff;
-    padding: 3.5vw 3vw 3.5vw 0;
-    padding-right: 0;
+    padding-top: 3.5vw;
+    padding-bottom: 3.5vw;
+    padding-left: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -201,11 +202,12 @@ html,body{
     color: #fff;
     text-decoration: none;
     padding-left: 10px;
+
 }
 .elem h1{
     text-transform: uppercase;
     font-size: 8vw;
-    padding-left: 10px;
+    padding-left: 0px;
 }
 
 #elem2{
@@ -214,7 +216,7 @@ html,body{
 .elem img{
     position: absolute;
     width: 300px;
-    z-index: 999;
+    z-index: 99999;
     opacity: 0;
 
 }
