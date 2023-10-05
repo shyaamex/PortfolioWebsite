@@ -1,19 +1,12 @@
-// import LocomotiveScroll from 'locomotive-scroll';
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
-});
+
 
 
 var crsr = document.querySelector("#cursor");
-var blur = document.querySelector("#cursor-blur");
 
 document.addEventListener("mousemove", function (dets) {
   crsr.style.left = dets.x + "px";
   crsr.style.top = dets.y + "px";
-  blur.style.left = dets.x - 250 + "px";
-  blur.style.top = dets.y - 250 + "px";
 });
 
 
@@ -152,8 +145,8 @@ document.querySelectorAll(".elem").forEach(function (elem) {
         opacity: 1,        
       });
       gsap.to(document.querySelector("#cursor"),{
-        width:20,
-        height:20,
+        width:10,
+        height:10,
         opacity:1,
         
       })

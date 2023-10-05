@@ -17,8 +17,8 @@ html,body{
 
 #cursor {
     opacity: 1;
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     background-color: #fff;
     border-radius: 50%;
     position: fixed;
