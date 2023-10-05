@@ -298,6 +298,12 @@ html,body{
     font-size: 1.5vw;
 }
 
+#tech:hover{
+    background-color: rgb(61, 159, 219);;
+    color: black;
+}
+
+
 #subscribe{
     color: #fff;
     background-color: black;
