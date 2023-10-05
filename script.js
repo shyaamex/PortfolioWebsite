@@ -1,4 +1,9 @@
+// import LocomotiveScroll from 'locomotive-scroll';
 
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('#main'),
+  smooth: true
+});
 
 
 
@@ -12,16 +17,6 @@ document.addEventListener("mousemove", function (dets) {
 
 
 
-
-
-// Cursor animations ( we haven't used mouse trail)
-
-// var crsr = document.querySelector("#cursor");
-
-// document.addEventListener("mousemove", function (dets) {
-//   crsr.style.left = dets.x + "px";
-//   crsr.style.top = dets.y + "px";
-// });
 
 function circleChaptaKaro() {
   // define default scale value
