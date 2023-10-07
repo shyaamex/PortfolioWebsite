@@ -142,7 +142,7 @@ document.querySelectorAll(".elem").forEach(function (elem) {
       gsap.to(document.querySelector("#cursor"),{
         width:10,
         height:10,
-        opacity:1,
+        opacity:0,
         
       })
     });
